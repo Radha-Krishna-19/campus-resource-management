@@ -1,0 +1,44 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { ArrowLeft, Users } from 'lucide-react';
+
+const FacultyList = () => {
+    const navigate = useNavigate();
+
+    return (
+        <div className="min-h-screen bg-background">
+            <Header />
+            <main className="container mx-auto px-6 py-8">
+                <div className="mb-6">
+                    <Button
+                        variant="ghost"
+                        onClick={() => navigate("/admin-dashboard")}
+                        className="mb-4 bg-amrita text-white flex items-center gap-1 hover:bg-amrita/95"
+                    >
+                        <ArrowLeft className="w-4 h-4 mr-2" />
+                        Back
+                    </Button>
+                    <h1 className="text-3xl font-bold text-foreground-90">Faculty List</h1>
+                    <p className="text-muted-foreground">Manage and view all faculty members</p>
+                </div>
+
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                            <Users className="w-5 h-5 text-amrita" />
+                            Faculty Members
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent className="py-10 text-center text-muted-foreground">
+                        <p>Faculty list feature is coming soon.</p>
+                    </CardContent>
+                </Card>
+            </main>
+        </div>
+    );
+};
+
+export default FacultyList;

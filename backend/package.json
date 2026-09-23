@@ -1,0 +1,48 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend Part for Campus resource management",
+  "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "seed": "node src/scripts/seedBookings.js",
+    "create-admin": "node src/scripts/createAdmin.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/genai": "^1.43.0",
+    "bcrypt": "^6.0.0",
+    "chrono-node": "^2.10.1",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "express-session": "^1.19.0",
+    "helmet": "^8.3.0",
+    "mongoose": "^9.1.5",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.12",
+    "nodemon": "^3.1.11",
+    "pino": "^10.3.1",
+    "pino-http": "^11.0.0",
+    "swagger-jsdoc": "^6.3.0",
+    "swagger-ui-express": "^5.0.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.2.0",
+    "pino-pretty": "^13.1.3",
+    "supertest": "^7.2.2"
+  },
+  "overrides": {
+    "fast-xml-parser": ">=5.3.8"
+  }
+}
